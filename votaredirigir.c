@@ -16,9 +16,9 @@ int main(void)
     }
     else if (idade >= 16)
     {
-    printf("Voce pode votar, mas nao pode dirigir\n");
+        printf("Voce pode votar, mas nao pode dirigir\n");
     }
-    else (idade < 16)
+    else
     {
         printf("Voce nao pode votar e nem dirigir");
     }
