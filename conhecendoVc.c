@@ -7,9 +7,10 @@ int main(void)
 {
     printf("Ola! Eu sou Radael, sistema que vive dentro desta maquina.\nQuero conhecer voce e, para isto, preciso que voce responda algumas perguntas que vou fazer.");
 
-    char nome[99];
+    char nome[40];
     printf("Para comecar, digite seu nome ou um apelido.\n\r");
     gets(nome);
+    printf("Oi %s !", nome);
 
     int idade;
     printf("Quantos anos voce tem?\n\r");
