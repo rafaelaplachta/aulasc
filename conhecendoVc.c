@@ -32,11 +32,20 @@ int main(void)
     {
         printf("Ainda eh crianca\n");
     }
+    int cidade;
+    char option;
+    printf("Voce mora em Curitiba? Responda sim ou nao \n\r");
+    gets(option);
 
-    char cidade[99];
-    printf("Em qual cidade voce mora?\n");
-    gets(cidade);
+    if (option == "sim")
+    {
+        cidade = 1;
+    }
+    else if (option == "nao")
+    {
+        cidade = 0;
+    }
+    printf("Hum: %s\n", cidade == 1 ? "Legal saber que voce mora em Curitiba tambem!" : " Adorararia conhecer sua cidade!");
 
-    system("pause");
-    return (0);
+    return 0;
 }

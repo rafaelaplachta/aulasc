@@ -4,18 +4,19 @@
 int main(void)
 {
     int number, remainder;
-    printf("Ola! Vamos iniciar..\n\r. Comece digitando um numero:\n\r");
+    printf("Ola! Vou indicar a voce se o numero informado e par ou impar...\n\rVamos iniciar..\n\r. Comece digitando um numero:\n\r");
     scanf("%d", &number);
-    remainder= %2;
+    remainder = number % 2;
 
     if (remainder == 0)
     {
-        printf("O numero que voce digitou e par");
+        printf("O numero que voce digitou e par \n\r Te vejo em breve!");
     }
     else
     {
-        printf("O numero que voce digitou e impar");
+        printf("O numero que voce digitou e impar \n\r Te vejo em breve!");
     }
-    return 0;
+
+        return 0;
     system("pause");
 }
