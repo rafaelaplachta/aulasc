@@ -4,7 +4,7 @@
 int main(void)
 {
     int number, remainder;
-    printf("Ola! Vou indicar a voce se o numero informado e par ou impar...\n\rVamos iniciar..\n\r. Comece digitando um numero:\n\r");
+    printf("Ola! Vou indicar a voce se o numero informado e par ou impar...\n\rVamos iniciar...\n\r Comece digitando um numero:\n\r");
     scanf("%d", &number);
     remainder = number % 2;
 
