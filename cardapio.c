@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include <math.h>
-//incluindo biblioteca math para arrendondar o valor do float para o number mais proximo.
 
 int main(void)
 {
@@ -21,55 +19,23 @@ int main(void)
            "8: Agua Mineral de Ouro R$24.17\n\r");
     scanf("%d", &opc);
     scanf("%.2f", &valorDoPrato);
-//"%.2f" serve para mostrar o float com apenas duas casas decimais.
+    //"%.2f" serve para mostrar o float com apenas duas casas decimais.
 
-if (opc == 1)
-{
-    valorDoPrato = 161.18; 
-} else if (opc == 2)
-{
-    valorDoPrato = 108.11; 
-}
-printf("O valor do prato e %.2f \n\r",  valorDoPrato);
-    
-
-    switch (opc)
+    if (opc == 1)
     {
-    case 1:
-        printf("Ok, voce escolheu o prato Camarao Internacional.\n\r");
-        printf("O valor deste prato e R$ %f", valorDoPrato);
-        break;
-
-    case 2:
-        printf("Ok, voce escolheu o prato Peixe Pizzaiolo.\n\r");
-        break;
-
-    case 3:
-        printf("Ok, voce escolheu o prato Carne de Sol do Sertao.\n\r");
-        break;
-
-    case 4:
-        printf("Ok, voce escolheu o prato Camarao Buzios.\n\r");
-        break;
-
-    case 5:
-        printf("Ok, voce escolheu o prato Camarao Praia de Olinda.\n\r");
-        break;
-
-    case 6:
-        printf("Ok, voce escolheu o prato Frango a Parmegiana.\n\r");
-        break;
-
-    case 7:
-        printf("Ok, voce escolheu o prato Tilapia Brasil.\n\r");
-        break;
-
-    case 8:
-        printf("Ok, voce escolheu Agua Mineral de Ouro.\n\r");
-        break;
-
-    default:
-        printf("Escolha incorreta.");
+        valorDoPrato = 161.18;
+        [printf("Ok, voce escolheu o prato Camarao Internacional.\n\r");
+        printf("O valor do prato e %.2f \n\r", valorDoPrato);]
+    }
+    else if (opc == 2)
+    {
+        valorDoPrato = 108.11;
+        [printf("Ok, voce escolheu o prato Peixe Pizzaiolo.\n\r");
+        printf("O valor do prato e %.2f \n\r", valorDoPrato);]
+    }
+    else
+    {
+        printf("invalido, cardapio em construcao");
     }
 
     system("pause");
