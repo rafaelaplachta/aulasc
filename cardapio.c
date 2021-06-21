@@ -2,35 +2,15 @@
 #include <stdlib.h>
 #include <conio.h>
 
-int confirme()
-{
-    char opc;
-
-    printf("Deseja pedir outro prato?   Digite s ou n:\n\r");
-
-    scanf("%s", &opc);
-
-    switch (opc)
-    {
-    case 's':
-        return (cardapio);
-        break;
-    case 'n':
-        return (cardapio);
-        break;
-    default:
-        printf("Opcao invalida!\n\r");
-        return (cardapio);
-        break;
-    }
-}
+void confirme(void);
+void cardapio(void);
+void conta(void);
 
 // Início do cardápio.
 
-int cardapio()
+void cardapio(void)
 {
     int opc;
-    int valorDoPrato;
 
     printf("Ola! Digite o numero referente ao prato que deseja saborear:\n\r"
            "1: Camarao Internacional R$161 reais \n\r"
@@ -43,29 +23,74 @@ int cardapio()
            "8: Agua Mineral de Ouro R$24 reais\n\r");
     scanf("%d", &opc);
 
-    if (opc == 1)
+    switch (opc)
     {
-        valorDoPrato = 161;
-        printf("Ok, voce escolheu o prato Camarao Internacional. O valor do prato e R$ %d reais.\n\r", valorDoPrato);
-        return confirme();
-    }
-    else if (opc == 2)
-    {
-        valorDoPrato = 108;
-        printf("Ok, voce escolheu o prato Peixe Pizzaiolo. O valor do prato e R$ %d reais.\n\r", valorDoPrato);
-        return confirme();
-    }
-    else
-    {
-        printf("invalido, cardapio em construcao.\n\r");
-        return confirme();
+    case 1:
+        printf("Ok, voce escolheu o prato Camarao Internacional.\n\r");
+        break;
+
+    case 2:
+        printf("Ok, voce escolheu o prato Peixe Pizzaiolo.\n\r");
+        break;
+
+    case 3:
+        printf("Ok, voce escolheu o prato Carne de Sol do Sertao.\n\r");
+        break;
+
+    case 4:
+        printf("Ok, voce escolheu o prato Camarao Buzios.\n\r");
+        break;
+
+    case 5:
+        printf("Ok, voce escolheu o prato Camarao Praia de Olinda.\n\r");
+        break;
+
+    case 6:
+        printf("Ok, voce escolheu o prato Frango a Parmegiana.\n\r");
+        break;
+
+    case 7:
+        printf("Ok, voce escolheu o prato Tilapia Brasil.\n\r");
+        break;
+
+    case 8:
+        printf("Ok, voce escolheu Agua Mineral de Ouro.\n\r");
+        break;
+
+    default:
+        printf("Escolha incorreta.");
     }
 }
 
-char conta()
-{
+//início da função "confirme".
 
-    char cliente;
+void confirme(void)
+{
+    char opc;
+
+    printf("Deseja pedir outro prato?   Digite s ou n:\n\r");
+
+    scanf("%s", &opc);
+
+    switch (opc)
+    {
+    case 's':
+        return cardapio();
+        break;
+    case 'n':
+        return conta();
+        break;
+    default:
+        printf("Opcao invalida!\n\r");
+        return cardapio();
+        break;
+    }
+}
+
+//início da função "conta".
+void conta(void)
+{
+    char *cliente;
 
     printf("Digite seu nome:\n\r");
     scanf("%s", &cliente);
@@ -75,10 +100,7 @@ char conta()
 
 int main(void)
 {
-
-    cardapio();
     printf("Cardapio Interativo\n\r");
 
-    system("pause");
     return 0;
 }
