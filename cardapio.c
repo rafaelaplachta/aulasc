@@ -2,12 +2,6 @@
 #include <stdlib.h>
 #include <conio.h>
 
-int main(void)
-{
-
-    return0;
-}
-
 void cardapio(void);
 void confirme(void);
 void conta(void);
@@ -17,29 +11,48 @@ void conta(void);
 void cardapio(void)
 {
     int opc;
-    int valorDoPrato;
+    const int prato_1 = 161;
+    const int prato_2 = 108;
+    const int prato_3 = 98;
+    const int prato_4 = 94;
+    const int prato_5 = 93;
+    const int prato_6 = 131;
 
     printf("Ola! Digite o numero referente ao prato que deseja saborear:\n"
-           "1: Camarao Internacional R$161 reais \n\r"
-           "2: Peixe Pizzaiolo R$108 reais\n\r"
-           "3: Carne de Sol do Sertao R$98 reais\n\r"
-           "4: Camarao Buzios R$94 reais\n\r"
-           "5: Camarao Praia de Olinda R$94 reais\n\r"
-           "6: Tilapia Brasil R$131 reais\n\r");
+           "1: Camarao Internacional R$ %i reais\n",
+           prato_1
+
+           "2: Peixe Pizzaiolo R$ %i reais\n",
+           prato_2
+
+           "3: Carne de Sol do Sertao R$ %i reais\n",
+           prato_3
+           "4: Camarao Buzios R$ %i reais\n",
+           prato_4
+           "5: Camarao Praia de Olinda R$ %i reais\n",
+           prato_5
+           "6: Tilapia Brasil R$ %i reais\n",
+           prato_6);
 
     scanf("%d", &opc);
 
     if (opc == 1)
     {
-        valorDoPrato = 161;
-        printf("Ok, voce escolheu o prato Camarao Internacional. O valor do prato e R$ %d reais.\n\r", valorDoPrato);
+        printf("Ok, voce escolheu o prato Camarao Internacional. O valor do prato e R$ %i reais.\n", prato_1);
     }
     else if (opc == 2)
     {
-        valorDoPrato = 108;
-        printf("Ok, voce escolheu o prato Peixe Pizzaiolo. O valor do prato e R$ %d reais.\n\r", valorDoPrato);
+        printf("Ok, voce escolheu o prato Peixe Pizzaiolo. O valor do prato e R$ %i reais.\n", prato_2);
     }
     else
     {
-        printf("invalido, cardapio em construcao.\n\r");
+        printf("opcao invalida, cardapio em construcao.\n");
+    }
+
+    int main(void)
+    {
+
+        system("pause");
+
+        return 0;
     }
