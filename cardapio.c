@@ -9,16 +9,25 @@ const int prato_4 = 94;
 const int prato_5 = 86;
 const int prato_6 = 131;
 
+void inicio();
 void cardapio();
 void outroPrato();
+void opc();
+void fim();
+
+//Cabeçalho do programa.
+void inicio()
+{
+    printf("\t\t\tSeja bem-vindo ao cardapio interativo!\n");
+}
 
 //cardápio.
 
 void cardapio()
 {
-    int opcum;
+    int opc_1;
 
-    printf("Ola! Digite o numero referente ao prato que deseja saborear:\n");
+    printf("Digite o numero referente ao prato que deseja saborear e tecle enter:\n");
     printf("1: Camarao Internacional R$ %i reais\n",
            prato_1);
 
@@ -34,15 +43,15 @@ void cardapio()
     printf("6: Tilapia Brasil R$ %i reais\n",
            prato_6);
 
-    scanf("%i", &opcum);
+    scanf("%i", &opc_1);
 
-    if (opcum == 1)
+    if (opc_1 == 1)
     {
         printf("Ok, voce escolheu o prato Camarao Internacional. O valor do prato e R$ %i reais.\n", prato_1);
         fflush(stdin);
         return outroPrato();
     }
-    else if (opcum == 2)
+    else if (opc_1 == 2)
     {
         printf("Ok, voce escolheu o prato Peixe Pizzaiolo. O valor do prato e R$ %i reais.\n", prato_2);
         fflush(stdin);
@@ -62,10 +71,41 @@ void outroPrato()
     printf("Deseja escolher outro prato?\n");
 }
 
+//Função opção.
+
+void opc()
+{
+    int opc;
+
+    printf("Digite 1 para sim ou 2 para opcao nao e tecle enter:\n");
+    scanf("%d", &opc);
+
+    if (opc == 1)
+    {
+        printf("Legal, vamos escolher outro prato.\n");
+        fflush(stdin);
+        return cardapio();
+    }
+    else
+        printf("Ok, vamos fechar sua conta.\n");
+    fflush(stdin);
+    return fim();
+}
+
+//Rodapé do programa.
+
+void fim()
+{
+    printf("Agradecemos a preferencia. Volte sempre!");
+}
+
 int main(void)
 {
+    inicio();
     cardapio();
     outroPrato();
+    opc();
+    fim();
 
     system("pause");
     return 0;
