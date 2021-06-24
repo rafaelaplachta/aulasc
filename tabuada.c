@@ -12,13 +12,13 @@ int main(void)
     scanf("%d", &tabuada);
     fflush(stdin);
 
-    printf("Ate qual numero deseja multiplicar a tabuada indicada?");
-    scanf("%d", &maxTabuada);
+    //printf("Ate qual numero deseja multiplicar a tabuada indicada?");
+    //scanf("%d", &maxTabuada);
     fflush(stdin);
 
-    for (i = 0; i <= "%d", maxTabuada; i++)
+    for (i = 0; i <= 10; i++)
     {
-        printf("%d vezes %d eh igual a %d\n", tabuada, i, tabuada * i);
+        printf("%d x %d = %d\n", tabuada, i, tabuada * i);
     }
 
     return 0;
